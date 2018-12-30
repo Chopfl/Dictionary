@@ -10,6 +10,7 @@ namespace DictionaryEng
     {
         static void Main(string[] args)
         {
+            Console.Out.WriteLine("Hello World");
         }
     }
 }
