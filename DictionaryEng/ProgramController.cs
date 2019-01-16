@@ -13,5 +13,11 @@ namespace DictionaryEng
             ProgramViews programViews = new ProgramViews();
             programViews.ShowMenu();
         }
+
+        public static void About()
+        {
+            ProgramViews programViews = new ProgramViews();
+            programViews.ShowAbout();
+        }
     }
 }
