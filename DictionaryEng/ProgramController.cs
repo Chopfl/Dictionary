@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DictionaryEng
 {
-    class Program
+    class ProgramController
     {
-        static void Main(string[] args)
+        public static void Menu()
         {
-            ProgramController.Menu();
-            Console.ReadLine();
+            ProgramViews programViews = new ProgramViews();
+            programViews.ShowMenu();
         }
     }
 }
