@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace DictionaryEng
 {
+    // Claudia Hopfl
+    // Grzegorz Banasiak
     class Program
     {
         static void Main(string[] args)
