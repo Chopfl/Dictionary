@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
+using System.Web;
 
 namespace DictionaryEng
 {
@@ -14,24 +11,28 @@ namespace DictionaryEng
         private String API_KEY;
         private String API_LINK_DETECTOR = "https://translate.yandex.net/api/v1.5/tr/detect?key=<APIkey>&text=";
         public String DetectedLanguage { get; set; }
-
+    
+        //Konstruktor klasy
         public LanguageDetectorClass( String TextToDetected )
         {
-            this.TextToDetected = TextToDetected;
+            this.TextToDetected = HttpUtility.HtmlEncode(TextToDetected);
             API_KEY = SettingsClass.API_KEY;
             API_LINK_DETECTOR = "https://translate.yandex.net/api/v1.5/tr/detect?key="+ API_KEY +"&text=";
         }
 
+        //Publiczna metoda sprawdza język podanego tekstu
         public void Detect()
         {
             DetectedLanguage =  ApiDetectorStart(TextToDetected);
         }
 
+        //Metoda zwraca rozwiniecie skrótu jezyka ( np en = English)
         public String GetFullNameLanguage()
         {
             return ConvertNameLanguage();
         }
 
+        //Metoda wysyła request do api w celu detekcji jezyka, zwraca skrót np "pl"
         private String ApiDetectorStart(String TextDetected)
         {
             String language = null;
@@ -54,7 +55,8 @@ namespace DictionaryEng
 
             return language;
         }
-
+        
+        //Metoda wyciąga sktór z odpowiedzi XML z api 
         private string getBetween(string strSource, string strStart, string strEnd)
         {
             int Start, End;

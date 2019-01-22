@@ -16,7 +16,7 @@ namespace DictionaryEng
             //Console.ReadLine();
 
             
-            LanguageDetectorClass lang = new LanguageDetectorClass("soldado");
+            LanguageDetectorClass lang = new LanguageDetectorClass("Yo tengo un gato dorado");
             lang.Detect();
             Console.WriteLine(lang.GetFullNameLanguage());
 
