@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Controllers\ProgramController.cs" />
+    <Compile Include="SettingsClass.cs" />
+    <Compile Include="Tools\LanguageDetectorClass.cs" />
     <Compile Include="Views\ProgramViews.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -14,6 +14,14 @@ namespace DictionaryEng
         {
             ProgramController.Menu();
             Console.ReadLine();
+
+            /*
+            LanguageDetectorClass lang = new LanguageDetectorClass("Siemano");
+            lang.Detect();
+            Console.WriteLine(lang.DetectedLanguage);
+
+            Console.ReadKey();
+            */
         }
     }
 }
