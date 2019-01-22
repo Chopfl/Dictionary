@@ -44,8 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="ProgramController.cs" />
-    <Compile Include="ProgramViews.cs" />
+    <Compile Include="Controllers\ProgramController.cs" />
+    <Compile Include="Views\ProgramViews.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
