@@ -12,16 +12,16 @@ namespace DictionaryEng
     {
         static void Main(string[] args)
         {
-            ProgramController.Menu();
-            Console.ReadLine();
+            //ProgramController.Menu();
+            //Console.ReadLine();
 
-            /*
-            LanguageDetectorClass lang = new LanguageDetectorClass("Siemano");
+            
+            LanguageDetectorClass lang = new LanguageDetectorClass("soldado");
             lang.Detect();
-            Console.WriteLine(lang.DetectedLanguage);
+            Console.WriteLine(lang.GetFullNameLanguage());
 
             Console.ReadKey();
-            */
+            
         }
     }
 }
