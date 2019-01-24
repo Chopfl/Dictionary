@@ -56,7 +56,7 @@ namespace DictionaryEng
             return language;
         }
         
-        //Metoda wyciąga sktór z odpowiedzi XML z api 
+        //Metoda wyciąga skrót z odpowiedzi XML z api 
         private string getBetween(string strSource, string strStart, string strEnd)
         {
             int Start, End;

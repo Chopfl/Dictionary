@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DictionaryEng
 {
-    class ProgramViews
+    class ProgramViews : IChoosable
     {
         public void ShowMenu()
         {
@@ -41,7 +41,7 @@ namespace DictionaryEng
         }
 
 
-        private void ChooseAction()
+        public void ChooseAction()
         {
             String actionNumber;
 
@@ -57,7 +57,7 @@ namespace DictionaryEng
             CheckActionNumber(actionNumber);
         }
 
-        private void CheckActionNumber( String actionNumber )
+        public void CheckActionNumber( String actionNumber )
         {
             switch (actionNumber)
             {
