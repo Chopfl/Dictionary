@@ -12,15 +12,9 @@ namespace DictionaryEng
     {
         static void Main(string[] args)
         {
-            //ProgramController.Menu();
-            //Console.ReadLine();
+            ProgramController.Menu();
+            Console.ReadLine();
 
-            
-            LanguageDetectorClass lang = new LanguageDetectorClass("Yo tengo un gato dorado");
-            lang.Detect();
-            Console.WriteLine(lang.GetFullNameLanguage());
-
-            Console.ReadKey();
             
         }
     }

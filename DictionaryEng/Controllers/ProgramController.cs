@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DictionaryEng
 {
-    class ProgramController
+    static class ProgramController
     {
         public static void Menu()
         {

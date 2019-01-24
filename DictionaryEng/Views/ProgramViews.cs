@@ -10,6 +10,7 @@ namespace DictionaryEng
     {
         public void ShowMenu()
         {
+            Console.Clear();
             Console.WriteLine("##########################################");
             Console.WriteLine("#####       English Dictionary       #####");
             Console.WriteLine("#####--------------------------------#####");
@@ -47,16 +48,16 @@ namespace DictionaryEng
             Console.WriteLine("");
             Console.WriteLine("################  Menu  #################");
             Console.WriteLine("1. Tlumacz slowek");
-            Console.WriteLine("2. Slowka");
+            Console.WriteLine("2. Detektor");
             Console.WriteLine("3. O Programie");
             Console.WriteLine("4. Zamknij");
             Console.WriteLine(" ");
             Console.Write("Wpisz kod dzialania: ");
             actionNumber = Console.ReadLine();
-            CheckActionNumberForMenu(actionNumber);
+            CheckActionNumber(actionNumber);
         }
 
-        private void CheckActionNumberForMenu( String actionNumber )
+        private void CheckActionNumber( String actionNumber )
         {
             switch (actionNumber)
             {
@@ -64,7 +65,7 @@ namespace DictionaryEng
                     Console.WriteLine(actionNumber);
                     break;
                 case "2":
-                    Console.WriteLine(actionNumber);
+                    DetectorController.DetectorIndex();
                     break;
                 case "3":
                     ProgramController.About();
