@@ -79,7 +79,6 @@ namespace DictionaryEng
                     ChooseAction();
                     break;
             }
-
         }
     }
 }
