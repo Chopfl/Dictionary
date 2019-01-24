@@ -8,7 +8,7 @@ namespace DictionaryEng
 {
     class DetectorViews
     {
-        String textToDetected;
+        String textToDetected = null;
 
         public void ShowDetectorIndex()
         {
@@ -25,6 +25,21 @@ namespace DictionaryEng
             textToDetected = Console.ReadLine();
             Console.WriteLine(" ");
             Console.WriteLine(" Tekst do sprawdzenia to: " + textToDetected);
+
+            ChooseAction();
+        }
+
+        public void ShowDetectedLanguage(String language, String text)
+        {
+            Console.Clear();
+
+            Console.WriteLine("##########################################");
+            Console.WriteLine("##########   Detektor językowy  ##########");
+            Console.WriteLine("##########################################");
+            Console.WriteLine(" ");
+            Console.WriteLine(" Tekst: " + text);
+            Console.WriteLine(" Jest w jezyku: " + language);
+            Console.WriteLine(textToDetected);
 
             ChooseAction();
         }
@@ -50,7 +65,7 @@ namespace DictionaryEng
             switch (actionNumber)
             {
                 case "1":
-                    Console.WriteLine(actionNumber);
+                    DetectorController.DetectLanguage(textToDetected);
                     break;
                 case "2":
                     DetectorController.DetectorIndex();
